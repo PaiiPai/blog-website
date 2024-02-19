@@ -175,3 +175,21 @@ textarea {
     background-color: #4D80C9;
     color: #ddd;
 }
+
+/* 404 page */
+.err-page {
+    height: 560px;
+    max-width: 100%;
+    background-image: url('./404_vader.png');
+    background-position: 100% 60%;
+    background-size: 48% 60%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.err-page a {
+    color: #00f;
+    text-decoration: underline;
+}

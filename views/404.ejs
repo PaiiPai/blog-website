@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloggo | <%= title %></title>
-</head>
+<%- include('partials/head.ejs') %>
 <body>
-    <h1>404 Oops!</h1>
-    <h2>The server you have requested does not exist.</h2>
+    <div class="err-page">
+        <h1>Oh no! You're wandering around in the darkness</h1>
+        <h2>"I FIND YOUR LACK OF FAITH DISTURBING." <a href="/">Go back</a></h2>
+    </div>
 </body>
 </html>
