@@ -31,39 +31,6 @@ app.use(express.urlencoded({ extended: true }));
 // static files
 app.use(express.static('public'));
 
-// mongodb sandbox
-/* app.get('/add-blog', (req, res) => {
-    const blog = new Blog({ // create an instance of a model
-        title: 'Ahsoka',
-        snippet: 'I have to sort this out on my own. Without the council. And without you.',
-        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    });
-
-    blog.save() // save data in mongodb
-        .then(results => res.send(results))
-        .catch(err => console.log(err));
-});
-
-app.get('/all-blogs', (req, res) => {
-    Blog.find()
-        .then(results => res.send(results))
-        .catch(err => console.log(err));
-});
-
-app.get('/blog', (req, res) => {
-    Blog.findById('65d3341f3a8725ab55e44bb7')
-        .then(results => res.send(results))
-        .catch(err => console.log(err));
-}); */
-
-/* app.use((req, res, next) => { // Manual way
-    console.log('Request has been made:');
-    console.log('host: ' + req.hostname);
-    console.log('path: ' + req.path);
-    console.log('method: ' + req.method);
-    next();
-}); */
-
 // Routing
 app.get('/about', (req, res) => {
     res.render('about', { title: 'About' });
