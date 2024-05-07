@@ -3,20 +3,21 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes');
 const { urlencoded } = require('body-parser');
+require("dotenv").config();
 
 // Creating an instance of express app
 const app = express();
 
 // connect to mongo db
-let user = encodeURIComponent('paipai');
-let pw = encodeURIComponent('Choco95%');
+let user = encodeURIComponent(process.env.DbUser);
+let pw = encodeURIComponent(process.env.DbPassword);
 const dbURI = `mongodb+srv://${user}:${pw}@cluster0.cfktonb.mongodb.net/Bloggo`;
 
 mongoose.connect(dbURI)
     .then(result => {
         console.log('Connected to MongoDB');
-        // making app listen
-        app.listen(3000);
+        // making app listen ***************
+        app.listen(process.env.PORT);
     })
     .catch(err => console.log(err));
 
